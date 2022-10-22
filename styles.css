@@ -1,0 +1,13 @@
+p {
+  margin: 0;
+}
+
+textarea, 
+button {
+  margin: 1.5em 0em;
+}
+
+.subscribe-container {
+  display: flex;
+  flex-direction: row;
+}
