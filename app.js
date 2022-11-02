@@ -1,20 +1,30 @@
 // Query Selectors
-var firstName = document.getElementById("firstName");
-var lastName = document.getElementById("lastName");
+var firstNameInput = document.getElementById("firstName");
+var lastNameInput = document.getElementById("lastName");
 var submitButton = document.getElementById("submitButton");
 
 // Event Listeners
-submitButton.addEventListener = ("click", submitForm);
+firstNameInput.addEventListener("keyup", enableSubmitButton);
+lastNameInput.addEventListener("keyup", enableSubmitButton);
+submitButton.addEventListener("click", submitForm);
 
 // Functions
 function enableSubmitButton() {
-  if (firstName.value !== "" && lastName.value !== "") {
-    // submitButton.classList.remove("disabled");
+  if (firstNameInput.value !== "" && lastNameInput.value !== "") {
     submitButton.disabled = false;
+  } else {
+    submitButton.disabled = true;
   };
 };
 
-function submitForm() {
+function resetForm() {
+  firstNameInput.value = "";
+  lastNameInput.value = "";
+};
+
+function submitForm(e) {
+  e.preventDefault();
   console.log("submitted");
+  resetForm();
   return;
 };
