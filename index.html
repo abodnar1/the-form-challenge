@@ -9,18 +9,20 @@
 <body>
   <h1>My Happy Form</h1>
   <form>
-    <input type="text" placeholder="First Name">
-    <input type="text" placeholder="Last Name">
+    <label for="firstName"></label>
+    <input type="text" id="firstName" placeholder="First Name" required minlength="1">
+    <label form="lastName"></label>
+    <input type="text" id="lastName" placeholder="Last Name" required minlength="1">
     <br />
-    <textarea></textarea>
+    <textarea id="textbox"></textarea>
     <br />
     <div class="subscribe-container">
       <p>Subscribe to newsletter</p>
-      <input type="checkbox" class="subscribe-checkbox">
+      <input type="checkbox" id="checkbox" class="subscribe-checkbox">
     </div>
-    <input type="text" placeholder="Enter your email">
+    <input type="text" id="email" placeholder="Enter your email">
     <br />
-    <button disabled>Submit</button>
+    <button id="submitButton" disabled>Submit</button>
   </form>
   <script src="app.js"></script>
 </body>
